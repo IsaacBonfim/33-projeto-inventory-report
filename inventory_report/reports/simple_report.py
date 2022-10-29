@@ -1,4 +1,4 @@
-from .validation_functions.expiration_date import proxima_validade
+from .validation_functions.expiration_date import next_expiration
 from .validation_functions.manufacture_date import oldest_manufacture
 from .validation_functions.most_products import most_products
 
@@ -14,7 +14,7 @@ class SimpleReport:
         for product in list:
             company_dict[product["nome_da_empresa"]] += 1
 
-        validade = proxima_validade(lista_de_validades)
+        validade = next_expiration(lista_de_validades)
         manufacture = oldest_manufacture(manufacture_list)
         company = most_products(company_dict)
 

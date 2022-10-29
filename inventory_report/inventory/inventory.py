@@ -8,7 +8,7 @@ from .import_functions.import_funtions import (
 class Inventory:
 
     @staticmethod
-    def create_report(path, type):
+    def import_data(path, type):
         if ".csv" in path:
             data = import_csv(path)
         elif ".json" in path:
